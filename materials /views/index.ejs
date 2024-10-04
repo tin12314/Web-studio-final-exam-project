@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('partials/head') %>
+
+  <body>
+    <div>
+      <!-- Your header here -->
+      <%- include('partials/header') %>
+
+      <!-- Main content -->
+      <main>
+        <!-- Your profile here -->
+        <aside id="profile">
+          <div>
+            <img src="images/profile.png" alt="tin" height="250" />
+          </div>
+          <div>
+            <div>
+              <span>Hi, I'm</span>
+              <h1>Do Thanh Tin</h1>
+            </div>
+            <div>
+              <h2>s3970879</h2>
+              <h2>s3970879@rmit.edu.vn</h2>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Your meal plan here -->
+        <section id="meal-plan">
+          <h1>TIN'S <b>DAILY MEAL PLAN</b></h1>
+
+          <!-- Your meal list here -->
+          <div id="meal-list">
+            <div>
+              <a href="/meal/#">
+                <img src="https://picsum.photos/id/63/200/300" height="300" alt="mealImg" />
+                <section>
+                  <h3>Meal Name</h3>
+                  <span> Time of Day - Meal Type </span>
+                </section>
+              </a>
+            </div>
+            <div>
+              <a href="/meal/#">
+                <img src="https://picsum.photos/id/63/200/300" height="150" alt="mealImg"/>
+                <section>
+                  <h3>Meal Name</h3>
+                  <span> Time of Day - Meal Type </span>
+                </section>
+              </a>
+            </div>
+            <div>
+              <a href="/meal/#">
+                <img src="https://picsum.photos/id/63/200/300" height="150" alt="mealImg" />
+                <section>
+                  <h3>Meal Name</h3>
+                  <span> Time of Day - Meal Type </span>
+                </section>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+    <%- include('partials/foot') %>
+  </body>
+</html>
