@@ -3,26 +3,35 @@
   <!-- head -->
   <%- include('partials/head') %>
 
-  <body>
-    <div>
+  <body >
+    <div class="container">
       <!-- Your header here -->
       <%- include('partials/header') %>
 
       <!-- Main content -->
-      <main>
-        <div>
-          <img src="https://picsum.photos/id/63/200/300" height="450" alt="mealImg" />
-          <section>
+      <main >
+
+        <div  >
+          <img src="https://picsum.photos/id/63/200/300" height="450" alt="mealImg" class="w-100" />
+          <section class="mt-3">
             <h1>Meal Name</h1>
             <span> Time of Day - Meal Type </span>
           </section>
         </div>
 
         <!-- Back button here -->
-        <button type="button" id="btn-back">Back</button>
+        <div class="text-center">
+          <a href="http://localhost:4000/">
+          <button type="button" id="btn-back" class="btn btn-primary px-4 ">Back</button>
+        </a>
+        </div>
       </main>
+
     </div>
 
-    <%- include('partials/foot') %>
+    <div class="mt-5">
+      <%- include('partials/foot') %>
+    </div>
+
   </body>
 </html>
