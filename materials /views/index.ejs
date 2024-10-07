@@ -4,32 +4,36 @@
   <%- include('partials/head') %>
 
   <body>
-    <div>
+    <div class="container">
       <!-- Your header here -->
       <%- include('partials/header') %>
 
       <!-- Main content -->
-      <main>
+      <main class="d-flex gap-5">
         <!-- Your profile here -->
-        <aside id="profile">
-          <div>
-            <img src="images/profile.png" alt="tin" height="250" />
+        <aside id="profile" class="p-3 mb-2 bg-primary text-white">
+          <div >
+            <img src="images/profile.png" alt="tin" height="250" class="rounded-circle"/>
           </div>
           <div>
             <div>
               <span>Hi, I'm</span>
               <h1>Do Thanh Tin</h1>
             </div>
-            <div>
-              <h2>s3970879</h2>
-              <h2>s3970879@rmit.edu.vn</h2>
+            <div class="fst-italic">
+              <p>s3970879</p>
+              <p>s3970879@rmit.edu.vn</p>
             </div>
           </div>
         </aside>
 
         <!-- Your meal plan here -->
-        <section id="meal-plan">
-          <h1>TIN'S <b>DAILY MEAL PLAN</b></h1>
+        <section id="meal-plan" class="w-100">
+
+          <div class="text-end">
+            <h1>TIN'S <b>DAILY MEAL PLAN</b></h1>
+            <button type="button" class="btn btn-primary px-4"> Refresh </button>
+          </div>
 
           <!-- Your meal list here -->
           <div id="meal-list">
