@@ -1,8 +1,18 @@
 <header class="my-5" >
-  <div class="d-flex align-items-center gap-3 ms-2">
+  <!-- tat ca screen size mac dinh la column
+  chi co screensize tu large tro len la row -->
+  <div class="d-flex flex-column flex-lg-row align-items-center gap-3 ms-2">
     <img src="/images/logo.png" width="64" height="64" alt="img icon" />
     <nav>
       <a href="/">Home Page</a>
+      
+      <% if (typeof meal !== 'undefined') { %>
+        <span>-></span>
+        <span class="breadcrumb-item active" aria-current="page">
+          <a href="#" id="currentMeal" onclick="reloadPage()"><%= meal.name %></a>
+        </span>
+      <% } %>
+
     </nav>
   </div>
 </header>

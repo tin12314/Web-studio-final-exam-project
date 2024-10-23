@@ -9,9 +9,9 @@
       <%- include('partials/header') %>
 
       <!-- Main content -->
-      <main class="d-flex gap-5">
+      <main class="d-flex flex-column flex-lg-row gap-5">
         <!-- Your profile here -->
-        <aside id="profile" class="p-3 mb-2 bg-primary text-white">
+        <aside id="profile" class="p-3 mb-2 bg-primary text-white d-flex flex-column align-items-center text-center text-lg-start gap-3">
           <div>
             <img
               src="images/profile.png"
@@ -23,7 +23,7 @@
           <div>
             <div>
               <span>Hi, I'm</span>
-              <h1>Do Thanh Tin</h1>
+               <h1>Do Thanh Tin</h1>
             </div>
             <div class="fst-italic">
               <p>s3970879</p>
@@ -34,9 +34,12 @@
 
         <!-- Your meal plan here -->
         <section id="meal-plan" class="w-100">
-          <div class="text-end mb-5 mt-3">
-            <h1>TIN'S <b>DAILY MEAL PLAN</b></h1>
-            <button type="button" class="btn btn-primary px-4">Refresh</button>
+          <div class="text-lg-end text-center mb-5 mt-3">
+            <h1><%= plan.name %></h1>
+            <form action="/" method="post">
+              <button class="btn btn-primary px-4">Refresh</button>
+            </form>
+
           </div>
 
           <!-- Your meal list here -->
@@ -44,16 +47,16 @@
             <!-- first -->
             <div class="row">
               <div class="col">
-                <a href="/meal/#">
+                <a href="/meal/<%= plan.meals[0].name %>">
                   <img
-                    src="https://picsum.photos/id/63/200/300"
+                    src="<%= plan.meals[0].imageUrl %>"
                     height="300"
                     alt="mealImg"
                     class="w-100 mb-2"
                   />
                   <section>
-                    <h3>Meal Name</h3>
-                    <span> Time of Day - Meal Type </span>
+                    <h3><%= plan.meals[0].name %></h3>
+                    <span> <%= plan.meals[0].timeOfDay %>- <%= plan.meals[0].mealType%> </span>
                   </section>
                 </a>
               </div>
@@ -61,32 +64,32 @@
             <!-- second -->
             <div class="row mt-4">
               <div class="col">
-                <a href="/meal/#">
+                <a href="/meal/<%= plan.meals[1].name %>">
                   <img
-                    src="https://picsum.photos/id/63/200/300"
+                    src="<%= plan.meals[1].imageUrl %>"
                     height="150"
                     alt="mealImg"
-                    class="w-100 "
+                    class="w-100"
                     
                   />
                   <section>
-                    <h3>Meal Name</h3>
-                    <span> Time of Day - Meal Type </span>
+                    <h3><%= plan.meals[1].name %></h3>
+                    <span>  <%= plan.meals[1].timeOfDay %>-<%= plan.meals[1].mealType%> </span>
                   </section>
                 </a>
               </div>
               <!-- third -->
               <div class="col">
-                <a href="/meal/#">
+                <a href="/meal/<%= plan.meals[2].name %>">
                   <img
-                    src="https://picsum.photos/id/63/200/300"
+                    src="<%= plan.meals[2].imageUrl %>"
                     height="150"
                     alt="mealImg"
                     class="w-100"
                   />
                   <section>
-                    <h3>Meal Name</h3>
-                    <span> Time of Day - Meal Type </span>
+                    <h3>M<%= plan.meals[2].name %></h3>
+                    <span> <%= plan.meals[2].timeOfDay %>-<%= plan.meals[2].mealType%> </span>
                   </section>
                 </a>
               </div>
@@ -97,5 +100,6 @@
     </div>
 
     <%- include('partials/foot') %>
+    <script src="/scripts/index.js"></script>
   </body>
 </html>
